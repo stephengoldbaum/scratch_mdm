@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'scala'
+}
+
+group 'scratch.mdm'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala3-library_3:3.0.1'
+    testImplementation 'org.scalatest:scalatest_3:3.2.9'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'org.finos.morphir:morphir_3:0.4.0-M8'
+    implementation 'org.finos.morphir:morphir-toolkit-core_3:0.4.0-M8'
+    implementation 'org.finos.morphir:morphir_3:0.4.0-M8'
+    implementation 'org.finos.morphir:morphir-toolkit-codec-zio-json_3:0.4.0-M8'
+    implementation 'org.finos.morphir:morphir-datamodel_3:0.3.0'
+
+    implementation 'dev.zio:zio-json-golden_3:0.6.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
